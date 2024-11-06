@@ -1,0 +1,7 @@
+<div cdkDrag class="card mb-2 shadow-sm task-card" style="cursor: move;">
+    <div *ngIf="!isEditing" class="card-body p-2" (dblclick)="enableEdit()">
+      <h6 class="card-title">{{ task.title }}</h6>
+      <p class="card-text small text-muted">{{ task.description }}</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,20 @@
+<div class="card shadow-sm">
+    <div class="card-header" [ngClass]="getColumnHeaderClass(column.title)">
+      <div style="display: flex;align-items: center;justify-content: space-between;"><h5 class="card-title">{{ column.title }} </h5><span class="badge bg-secondary">{{ taskCount }}</span></div>
+    </div>
+  
+    <div 
+      cdkDropList
+      [id]="column.id"
+      [cdkDropListData]="column.tasks"
+      [cdkDropListConnectedTo]="connectedDropLists"
+      (cdkDropListDropped)="drop($event)"
+      class="card-body task-list p-3"
+      style="min-height: 200px; background-color: #f9f9f9; border-radius: 5px;">
+        
+      <div *ngFor="let task of column.tasks" cdkDrag class="mb-3">
+        <app-task [task]="task" (taskUpdated)="updateTask($event)"></app-task>
+      </div>
+    </div>
+  </div>
+  

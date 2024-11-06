@@ -1,0 +1,25 @@
+/* board.component.scss */
+.board {
+    padding: 20px;
+  }
+  
+  .task-list {
+    border: 1px solid #ddd;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+  }
+  
+  /* column.component.scss */
+  .column .card-header {
+    font-size: 1.1em;
+  }
+  
+  /* task.component.scss */
+  .task-card {
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .task-card:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
